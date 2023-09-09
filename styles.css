@@ -1,0 +1,411 @@
+:root {
+  --color1: #05527C;  
+  --color2: #108AAF;
+  --color3: #CEC7A2;
+  --color4: #F0D3A4;
+  --color5: #DE6563;
+  --fontScript: "Dancing Script";
+  --fontSerif: "Raleway";
+  --fontSans: "Open Sans";
+  --fontAlt: "Crimson Text";
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.bold {
+  font-size: 115%;
+}
+
+h1 {
+  font-family: var(--fontScript), serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--fontScript), serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--fontSerif), serif;
+  font-size: 2.5rem;
+}
+
+hr {
+  border: 2px solid var(--color3);
+  width: 75%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+navbar {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: var(--color1);
+  color: var(--color3);
+  align-items: center;
+  border-bottom: black 2px solid;
+}
+
+.logo {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  max-width: 350px;
+  height: 12%;
+  justify-content: space-between;
+  top: 0%;
+  left: 10%;
+}
+
+.navbuttons {
+  position: fixed;
+  right: 0;
+  width: 65%;
+  height: 12%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--color3);
+}
+
+.navbuttons a {
+  color: var(--color3);
+  margin: 10px;
+  font-family: var(--fontSans), sans-serif;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease-in 0s;
+}
+
+.navbuttons a:hover {
+  color: var(--color5);
+  transform: scale(1.1);
+}
+
+.welcome-section {
+  margin: 120px 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color4);
+  padding: 5% 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hiBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.welcome-section h1 {
+  font-size: 7rem;
+  animation: 1.5s infinite running linear pulsate;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+}
+
+.mainflex {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.bio {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 60vh;
+  background-color: var(--color1);
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMe {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color4);
+  flex-grow: 1;
+}
+
+.bioText {
+  color: var(--color4);
+  font-family: var(--fontSans);
+  margin: 0 60px 0 40px;
+  line-height: 1.7;
+}
+
+.projects {
+  margin: 0;
+  border-bottom: 4px black solid;
+  background-color: var(--color3);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.projects div hr {
+  border: 2px solid black;
+  width: 100%;
+}
+
+.projectWrapper {
+  margin-top: 5vh;
+  display: grid;
+  gap: 5vw;
+  grid-template-columns: 40vw 40vw;
+  grid-template-rows: repeat(1fr);
+  flex-grow: 2;
+}
+.project-tile {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--fontSans);
+}
+.project-tile p {
+  margin: 5px 0 10px 0;
+}
+
+.project-tile img {
+  width: 40vw;
+  height: 40vh;
+  clip-path: inset(20px);
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.project-tile img:hover {
+  transform: scale(1.05);
+}
+
+.albums {
+  background-color: var(--color2);
+  width: 100vw;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.albumText {
+  text-align: center;
+  width: 100%;
+}
+
+.albumText h3 {
+  margin-bottom: 10px;
+}
+
+.albumText hr {
+  width: 60% !important;
+  margin-left: 20%;
+}
+
+.albumWrapper {
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  grid-template-rows: repeat(1fr);
+  gap: 1vw;
+  width: 100vw;
+  margin-left: 8vw;
+  margin-top: 8vh;
+}
+
+.album img {
+  width: 20vw;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.album img:hover {
+  transform: scale(1.05);
+
+}
+
+.concertWorks {
+  width: 100vw;
+  background-color: var(--color4);
+  display: flex;
+  flex-direction: column;
+}
+
+.CWBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.CWBanner hr {
+  width: 60% !important;
+  margin-bottom: 40px; 
+}
+
+.CWWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  grid-template-rows: repeat(1fr);
+  gap: 4vw;
+  margin: 10px 8vw;
+}
+.cWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CWWrapper img {
+  width: 40vw;
+  transition: 0.5s;
+}
+
+.CWWrapper img:hover {
+  transform: scale(1.05);
+}
+
+.contact {
+  width: 100%;
+  background-color: var(--color5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+.contact h4 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.contact h3 {
+  margin: 20px 0 20px 0;
+}
+
+.contact hr {
+  width: 60% !important;
+  margin-bottom: 20px;
+}
+#profile-link {
+  target: _blank;
+}
+.contact a {
+  color: black;
+  margin: 10px;
+  font-family: var(--fontSans), sans-serif;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease-in 0s;
+}
+
+.contact a:hover {
+  color: var(--color3);
+  transform: scale(1.1);
+  
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 5vh;
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: black 2px solid;
+}
+
+footer p {
+  color: var(--color3);
+  font-size: 16px;
+  font-family: var(--fontAlt);
+}
+
+@media (max-width: 900px) {
+  .logo {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  max-width: 250px;
+  height: 12%;
+  justify-content: space-between;
+  top: 0%;
+  left: 3%;
+}
+}
+
+@media (max-width: 690px) {
+  .logo {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  max-width: 250px;
+  height: 12%;
+  justify-content: space-between;
+  top: 0%;
+  left: 3%;
+}
+
+.navbuttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+.navbuttons a {
+  color: var(--color3);
+  margin: 5px;
+  font-family: var(--fontSans), sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.5s ease-in 0s;
+}
+}
